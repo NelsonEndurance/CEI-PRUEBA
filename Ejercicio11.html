@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #in-nombre{
+                display: block;
+                margin-bottom: 1em;
+            }
+
+            #in-apellido{
+                display: block;
+                margin-bottom: 1em;
+            }
+
+            #button{
+                display: block;
+                margin-top: 1em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>VER DATOS DE OBJETO</h1>
+        <input id="in-nombre"></input> 
+        <input id="in-apellido"></input>
+        <input id="in-edad"></input>
+        <button id="button">Ver datos</button>
+
+        <script>
+
+            /* CREAR OBJETO CON CARACTERÍSTICAS */
+
+          var persona = new Object();
+            persona.nombre = "Fran" ;
+            persona.apellido = "Aragón";
+            persona.edad = 23;
+
+            /* SELECCIONAR EL ELEMENTO BOTÓN */
+            var click = document.getElementById("button");
+
+            /* CREAMOS UN EVENTO CLICK PARA MOSTRAR LOS DATOS */
+
+            click.addEventListener("click", show)
+
+            function show() {
+
+                var nombre = document.getElementById("in-nombre").value
+                var apellido = document.getElementById("in-apellido").value
+                var edad = document.getElementById("in-edad").value
+
+                if (nombre == "") {
+                    alert("Nombre: vacio" + " apellido " + apellido + " edad " + edad)
+                }else if (apellido == "") {
+
+                    alert("Nombre" + nombre + " apellido : vacio" + " edad " + edad)
+                } else if(edad==""){ 
+                    alert("Nombre" + nombre + "apellido " + apellido + " edad: vacio")
+                }
+                alert("Nombre: " + nombre + " apellido " + apellido + " edad " + edad)
+
+            }
+
+
+
+
+
+
+
+        </script>
+    </body>
+    </html>
+</body>
+</html>

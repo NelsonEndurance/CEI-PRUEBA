@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>CREANDO OBJETO SIMPLE</h1>
+    <p id="nombre"></p>
+    <p id="apellido"></p>
+    <p id="edad"></p>
+    <button id="button">Ver datos</button>
+    <button id="button2">Borrar datos</button>
+
+
+    <script>
+
+        /* CREAR OBJETO CON CARACTERÍSTICAS */
+
+        var persona = new Object();
+        persona.nombre = "Fran" ;
+        persona.apellido = "Aragón";
+        persona.edad = 23;
+
+        /* SELECCIONAR EL ELEMENTO BOTÓN */
+         var click = document.getElementById("button");
+
+         /* CREAMOS UNA VARIABLE PARA CADA P */
+        var nombre = document.getElementById("nombre");
+        var apellido = document.getElementById("apellido");
+        var edad = document.getElementById("edad");
+
+         /* CREAMOS UN EVENTO CLICK PARA QUE APAREZCAN LOS DATOS */
+
+         click.addEventListener("click", show) 
+
+        function man() {
+            nombre.innerHTML = persona.nombre
+            apellido.innerHTML = persona.apellido
+            edad.innerHTML = persona.edad
+        } 
+
+        /* SELECCIONAR EL BOTÓN Nº2 */
+            var click2 = document.getElementById("button2")
+
+        /* CREAMOS UN EVENTO CLICK PARA BORRAR DATOS  */
+
+        click2.addEventListener("click", clean)
+
+        function clean(){
+            persona.nombre = " "
+            persona.apellido = " "
+            persona.edad = " "
+
+            man()
+        }
+        
+        function show(){
+            persona.nombre = " Fran "
+            persona.apellido = " Aragón "
+            persona.edad = 23
+
+            man()
+        }
+
+        
+    </script>
+</body>
+</html>
